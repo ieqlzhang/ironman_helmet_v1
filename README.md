@@ -7,6 +7,7 @@ An ESP32-based Ironman helmet controller with LED animations and sensor integrat
 - WS2812B LED strips
 - MPU6050 accelerometer/gyroscope
 - Sound module (DFPlayer Mini)
+- ASR PRO voice recognition module (under consideration)
 
 ## Installation
 1. Install [PlatformIO](https://platformio.org/) extension in VSCode
@@ -28,7 +29,7 @@ pio run -t upload
 Control modes:
 - Button press cycles through animation patterns
 - Head tilt controls direction using MPU6050
-- Voice commands via Bluetooth (WIP)
+- ASR PRO-based voice control system (WIP)
 
 ## License
 MIT License - See LICENSE for details
