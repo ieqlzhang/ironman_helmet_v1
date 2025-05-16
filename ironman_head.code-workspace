@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "LED_light_control",
+			"path": "../LED_light_control"
+		}
+	],
+	"settings": {}
+}

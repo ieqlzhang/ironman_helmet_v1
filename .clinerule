@@ -1,0 +1,36 @@
+# Project Structure
+## Directory Layout
+- src/                : Main source code directory
+  - main.cpp          : Primary application logic for ESP32 servo control
+- include/            : Header files (currently empty)
+- lib/                : External libraries (contains ESP32Servo dependency)
+- test/               : Unit tests (currently empty)
+- platformio.ini      : PlatformIO project configuration
+
+# Code Overview (src/main.cpp)
+## Hardware Configuration
+- Servos:
+  - Servo1: GPIO13 (0° to 180°)
+  - Servo2: GPIO14 (180° to 0°)
+- Button: GPIO12 (INPUT_PULLUP)
+
+## Key Functionality
+1. Initialization:
+   - Serial communication @ 9600 baud
+   - Attach servo motors to GPIO pins
+   - Initialize button with debouncing
+
+2. Main Loop:
+   - Implements button debouncing (50ms delay)
+   - Toggles servo positions on button press
+   - Maintains inverse relationship between servos (one at 0°, other at 180°)
+   - Serial output reports servo positions after each toggle
+
+3. Servo Control:
+   - Smooth position transition handling
+   - Coordinated movement between two servos
+   - Built-in cooldown period (300ms) between button presses
+
+## Dependencies
+- ESP32Servo library (v3.0.6)
+- Arduino framework
